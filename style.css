@@ -1,0 +1,138 @@
+:root{
+    --ff-sans: 'Poppins', sans-serif;
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fs-small: 14px;
+    --fs-normal: 16px;
+
+    --clr-Red: hsl(0, 78%, 62%);
+    --clr-Cyan: hsl(180, 62%, 55%);
+    --clr-Orange: hsl(34, 97%, 64%);
+    --clr-Blue: hsl(212, 86%, 64%);
+
+    --clr-VeryDarkBlue: hsl(234, 12%, 34%);
+    --clr-GrayishBlue: hsl(229, 6%, 66%);
+    --clr-VeryLightGray: hsl(0, 0%, 98%);
+}
+
+html{
+    font-family: var(--ff-sans);
+    color: var(--clr-VeryDarkBlue);
+    font-weight: var(--fw-normal);
+    line-height: 1.7;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: var(--fs-small);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    /* width: 100%; */
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.4;
+    /* margin-block: 0; */
+}
+
+.container{
+    margin-inline: auto;
+    width: min(84%, 70.5rem);
+}
+
+
+section{
+    padding: 4rem 0;
+    @media (min-width: 40em){
+        section{
+            padding: 7rem 0;
+        }
+    }
+}
+
+p{
+    color: var(--clr-GrayishBlue);
+    margin-top: 0;
+}
+
+.section-1 .container > :first-child{
+    text-align: center;
+}
+
+.section-1 span{
+    color: var(--clr-GrayishBlue);
+    font-weight: var(--fw-light);
+}
+
+.section-1 .grid-container{
+    display: grid;
+    gap: 2rem;
+    margin-block: 3rem;
+}
+
+.card{
+    padding: 1.7rem;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid;
+    border-radius: 7px;
+    max-width: 23rem;
+    margin-inline: auto;
+}
+
+.section-1 img{
+    margin-left: auto;
+    margin-top: 2rem;
+    max-width: 3.7rem;
+}
+
+.section-1 .grid-container >:nth-child(2){
+    display: grid;
+    gap: 2rem;
+}
+
+
+.border-cyan{
+    border-color: var(--clr-Cyan);
+}
+
+.border-red{
+    border-color: var(--clr-Red);
+}
+
+.border-orange{
+    border-color: var(--clr-Orange);
+}
+
+.border-blue{
+    border-color: var(--clr-Blue);
+}
+
+@media (min-width: 49em){
+    .section-1 .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    .section-1 .container >:first-child{
+        width: min(80%, 36rem);
+        margin-inline: auto;
+    }
+
+    p{
+        font-size: var(--fs-normal);
+    }
+
+    h1{
+        font-size: 1.7rem;
+    }
+}
